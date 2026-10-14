@@ -65,3 +65,14 @@
 .dialog-drive-link{margin-bottom:0}
 @media(max-width:1100px){.hero-camera{right:-8%;opacity:.33;transform:rotate(-5deg) scale(.85);transform-origin:top right}}
 @media(max-width:700px){.site-header{background:#0d1218}.brand{color:var(--paper)}.menu-toggle span{background:var(--paper)}.mobile-nav{background:#0c1117;color:var(--paper);border-bottom-color:#3a4148}.hero-camera{display:none}.hero{background:radial-gradient(circle at 94% 18%,#242d35,#10151b 57%)}.hero h1{text-shadow:none}.project-visual{aspect-ratio:1.13}.about-art{min-height:390px}.about-mark-plate img{width:137px;height:158px}.about-mark-plate strong{font-size:69px}.about-mark-plate span{font-size:14px}.about-brand-kicker{font-size:9px}.brand-symbol{width:95%;height:95%}}
+
+/* Final playback polish: prioritize readable on-page video on phones */
+.project-dialog{overscroll-behavior:contain}
+.dialog-video iframe,.dialog-video video{background:#090d11;border-radius:4px}
+@media(max-width:700px){
+  .project-dialog{width:96vw;max-height:92dvh}
+  .dialog-video{padding:14px;min-height:0}
+  .dialog-video iframe,.dialog-video video{width:auto;max-width:100%;height:min(58dvh,520px);max-height:58dvh;aspect-ratio:9/16}
+  .dialog-info{padding:26px 22px}
+  .brand-mark{width:45px;height:45px}
+}
