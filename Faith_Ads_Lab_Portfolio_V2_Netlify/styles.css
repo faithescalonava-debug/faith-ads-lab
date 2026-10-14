@@ -14,3 +14,5 @@
 .project-dialog:focus{outline:none}
 @media(max-width:700px){.work-cta{display:block;padding:25px 20px}.work-cta .button{display:inline-block;margin-top:24px}.hero-actions .button{min-height:48px;display:inline-flex;align-items:center}.hero h1{overflow-wrap:normal}.project-dialog{max-height:92dvh}.project-visual img{object-position:center}}
 @media(max-width:390px){.hero-actions{width:100%}.hero-actions .button{justify-content:space-between}}
+
+.brand-mark{border-radius:8px}.brand-symbol{width:80%;height:80%;color:var(--paper)}.footer-logo{display:grid;place-items:center;width:45px;height:45px;background:var(--ink);border:1px solid var(--accent);border-radius:8px}.dialog-drive-link{display:inline-block;margin:20px 0;padding:12px;background:var(--ink);color:white;font:11px var(--mono)}
