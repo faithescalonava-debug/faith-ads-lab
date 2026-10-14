@@ -71,10 +71,10 @@ function artwork(p){
 }
 function draw(filter='all') {
   const selected = projects.filter(p => filter === 'all' || p.category===filter);
-  grid.innerHTML = selected.map(p => `<article class="project-card" data-id="${p.id}"><button class="project-visual" type="button" aria-label="Explore ${escapeHTML(p.brand)} project" data-project="${p.id}">${artwork(p)}<span class="project-play">${p.video?'▶ PLAY THE SAMPLE':'↗ VIEW SAMPLE'}</span><span class="project-ratio">WATCH ON SITE</span></button><div class="project-meta"><span>${p.num} / ${escapeHTML(p.type)}</span><span>VIDEO SAMPLE ↗</span></div><button type="button" class="project-title" data-project="${p.id}">${escapeHTML(p.title)} <span>↗</span></button><p class="project-brand">${escapeHTML(p.brand)}</p></article>`).join('');
+  grid.innerHTML = selected.map(p => `<article class="project-card" data-id="${p.id}"><button class="project-visual" type="button" aria-label="Explore ${escapeHTML(p.brand)} project" data-project="${p.id}">${artwork(p)}<span class="project-play">${p.video?'▶ PLAY THE SAMPLE':'↗︎ VIEW SAMPLE'}</span><span class="project-ratio">WATCH ON SITE</span></button><div class="project-meta"><span>${p.num} / ${escapeHTML(p.type)}</span><span>VIDEO SAMPLE ↗︎</span></div><button type="button" class="project-title" data-project="${p.id}">${escapeHTML(p.title)} <span class="project-vector-arrow"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></button><p class="project-brand">${escapeHTML(p.brand)}</p></article>`).join('');
 }
 function videoMarkup(url) {
- if (!url) return '<div class="video-notice">VIDEO PREVIEW COMING SOON <span>↗</span><small>Explore the creative concept and execution notes for this portfolio study.</small></div>';
+ if (!url) return '<div class="video-notice">VIDEO PREVIEW COMING SOON <span>↗︎</span><small>Explore the creative concept and execution notes for this portfolio study.</small></div>';
  let parsed;
  try { parsed = new URL(url, window.location.href); } catch (_) { return '<div class="video-notice">PREVIEW UNAVAILABLE</div>'; }
  if (!['https:', 'http:'].includes(parsed.protocol)) return '<div class="video-notice">PREVIEW UNAVAILABLE</div>';
@@ -91,7 +91,7 @@ function videoMarkup(url) {
  if (host === 'drive.google.com' && parsed.pathname.includes('/file/d/') && parsed.pathname.endsWith('/preview')) return `<iframe src="${escapeHTML(parsed.href)}" title="Portfolio video" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>`;
  if (embed) return `<iframe src="${escapeHTML(embed)}" title="Portfolio project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
  // Only self-hosted video files are supported here. Third-party non-embed pages cannot play as MP4s.
- if (!/\.(mp4|webm|mov)$/i.test(parsed.pathname)) return '<div class="video-notice">VIDEO LINK NEEDS AN EMBED URL <span>↗</span></div>';
+ if (!/\.(mp4|webm|mov)$/i.test(parsed.pathname)) return '<div class="video-notice">VIDEO LINK NEEDS AN EMBED URL <span>↗︎</span></div>';
  return `<video controls playsinline preload="metadata" src="${escapeHTML(parsed.href)}"></video>`;
 }
 function openProject(id){const p=projects.find(x=>x.id===id);if(!p)return; dialogContent.innerHTML=`<div class="dialog-grid"><div class="dialog-video">${videoMarkup(p.video)}</div><div class="dialog-info"><span class="eyebrow">${escapeHTML(p.num)} / ${escapeHTML(p.type)}</span><h2 id="dialog-title">${escapeHTML(p.title)}</h2><p class="dialog-brand">${escapeHTML(p.brand)}</p><div class="dialog-detail"><b>THE HOOK</b><p>${escapeHTML(p.hook)}</p></div><div class="dialog-detail"><b>THE IDEA</b><p>${escapeHTML(p.idea)}</p></div><div class="dialog-detail"><b>THE EXECUTION</b><p>${escapeHTML(p.execution)}</p></div><span class="dialog-disclaimer">Creative sample · No ad performance results claimed</span></div></div>`;dialog.showModal();document.body.classList.add('dialog-open')}
