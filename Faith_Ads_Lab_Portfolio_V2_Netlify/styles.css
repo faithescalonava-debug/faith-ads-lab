@@ -22,3 +22,46 @@
 
 /* Pricing: clean, transparent and easy to compare */
 .pricing{padding-top:72px}.pricing-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin:46px 0}.pricing-head h2{font:clamp(42px,5.6vw,85px)/1.05 var(--display);letter-spacing:-.065em;margin:18px 0 0}.pricing-head h2 em{font-style:normal;color:var(--accent)}.pricing-head>p{max-width:330px;font-size:16px;line-height:1.65}.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.price-card{border:1px solid var(--line);padding:30px 26px;display:flex;flex-direction:column;min-height:480px}.price-card.featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}.price-label{font:10px var(--mono);letter-spacing:.05em;color:var(--accent)}.price-card h3{font:clamp(22px,2.1vw,32px)/1.1 var(--display);letter-spacing:-.04em;margin:26px 0 16px}.price-amount{font:clamp(28px,3vw,42px)/1.1 var(--display);letter-spacing:-.045em;margin:0}.price-amount small{display:block;font:10px var(--mono);letter-spacing:0;margin-top:8px;color:var(--muted)}.featured .price-amount small{color:#aaa}.price-summary{font-size:14px;line-height:1.65;margin:22px 0 12px}.price-card ul{list-style:none;padding:0;margin:12px 0 28px;display:grid;gap:12px}.price-card li{font-size:13px;line-height:1.5;padding-left:20px;position:relative}.price-card li:before{content:'↗';position:absolute;left:0;color:var(--accent)}.price-action{display:block;margin-top:auto;padding:16px 12px;text-align:center;border:1px solid var(--ink);font:10px var(--mono)}.price-action:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}.featured .price-action{background:var(--accent);color:var(--ink);border-color:var(--accent)}.pricing-note{max-width:1050px;color:var(--muted);font:11px/1.8 var(--mono);margin:24px 0 0}@media(max-width:900px){.pricing-grid{grid-template-columns:1fr}.price-card{min-height:0}.pricing-head{display:block}.pricing-head>p{max-width:580px}}
+
+/* Faith Ads Lab 2026 identity refresh — restrained cinematic treatment */
+.site-header{background:#0c1117;color:var(--paper);border-bottom:1px solid #303941}
+.brand-mark{background:transparent;border-radius:0;overflow:visible}
+.brand-symbol{display:block;width:93%;height:93%;object-fit:contain;filter:drop-shadow(0 2px 7px rgba(0,0,0,.17))}
+.brand-small{opacity:.76}
+.desktop-nav a:hover{color:var(--accent)}
+.header-cta{background:var(--accent);color:var(--ink);font-weight:700}
+.header-cta span{color:var(--ink)}
+.hero{background:radial-gradient(ellipse at 80% 44%,#24252c 0%,#161a20 35%,#10151b 75%);position:relative}
+.hero-inner{isolation:isolate}
+.hero-topline,.hero h1,.hero-bottom{position:relative;z-index:2}
+.hero h1{text-shadow:0 12px 34px #05090a55}
+.hero-camera{position:absolute;right:4%;top:120px;width:min(43vw,595px);height:465px;transform:rotate(-5deg);opacity:.79;z-index:0;pointer-events:none;filter:drop-shadow(0 22px 45px #000a)}
+.hero-camera:before{content:"";position:absolute;inset:16% -7% 8%;background:radial-gradient(ellipse,#f05b3f3b 0%,transparent 61%);filter:blur(30px)}
+.camera-frame{position:absolute;top:15%;left:5%;width:89%;height:58%;background:linear-gradient(145deg,#424953,#080b11 34%,#282f37 70%,#07090d);border:11px solid #212930;border-radius:24px;box-shadow:inset 0 0 0 2px #77808b70,0 0 0 15px #0b0e13,15px 23px 30px #000c}
+.camera-frame:before{content:"";position:absolute;right:13px;top:8px;bottom:8px;width:13px;background:repeating-linear-gradient(to bottom,#f05b3f 0 20px,#1b1b20 21px 38px);box-shadow:0 0 16px #f05b3f99}
+.camera-screen{position:absolute;inset:25px 54px 25px 30px;background:radial-gradient(ellipse at center,#222a34,#070b10 72%);border:3px solid #4b5866;box-shadow:inset 0 0 30px #000;display:flex;align-items:center;justify-content:center}
+.camera-screen img{height:68%;width:42%;object-fit:contain;filter:drop-shadow(0 2px 12px #f05b3f33)}
+.camera-antenna{position:absolute;left:15%;top:4%;width:31%;height:60px;border:13px solid #12181f;border-bottom:0;border-radius:11px 11px 0 0;transform:skew(18deg)}
+.camera-controls{position:absolute;right:-14px;bottom:-60px;width:66px;height:58px;background:#19212b;border:7px solid #090e14;border-radius:8px;display:flex;align-items:center;justify-content:space-around}
+.camera-controls i{width:8px;height:22px;background:#f05b3f;box-shadow:0 0 8px #f05b3f;display:block}
+.camera-handle{position:absolute;left:29%;top:76%;width:46%;height:20%;background:linear-gradient(90deg,#090b0e,#303944 48%,#0a0e12);clip-path:polygon(12% 0,88% 0,100% 95%,0 95%)}
+.hero-camera-note{position:absolute;right:3%;bottom:-2%;font:italic clamp(17px,2.5vw,32px)/1.05 var(--body);font-weight:700;letter-spacing:-.04em;color:#f8f4ea;transform:rotate(-7deg);text-shadow:0 4px 15px #000}
+.project-visual{aspect-ratio:1.2}
+.project-thumbnail{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%;z-index:0;transition:transform .5s ease,filter .5s ease;filter:saturate(.92)}
+.project-thumbnail[hidden]{display:none}
+.project-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#070b0f88,transparent 38%);pointer-events:none}
+.project-visual:hover .project-thumbnail{transform:scale(1.045);filter:saturate(1.06)}
+.project-visual:hover .poster-art{transform:none}
+.project-play{z-index:2;background:var(--accent);color:var(--ink);font-weight:700}
+.project-ratio{z-index:2;background:#10151b;color:#fff}
+.about-art{background:radial-gradient(ellipse at 54% 45%,#27323e,#111821 54%,#090e13);border:1px solid #263341;box-shadow:inset 0 0 100px #0007;isolation:isolate}
+.about-art:before{content:"";position:absolute;width:62%;aspect-ratio:1;left:18%;top:12%;background:radial-gradient(circle,#f05b3f22,transparent 71%);filter:blur(20px)}
+.about-brand-kicker{position:absolute;top:27px;left:27px;color:#b8c0c8;font:10px var(--mono);letter-spacing:1px}
+.about-mark-plate{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:9px;text-align:center;padding:60px 20px}
+.about-mark-plate img{width:clamp(110px,12vw,185px);height:clamp(125px,14vw,220px);object-fit:contain;filter:drop-shadow(0 16px 20px #0008)}
+.about-mark-plate strong{font:clamp(51px,6vw,88px)/.96 var(--display);letter-spacing:-.065em;margin-top:9px}
+.about-mark-plate span{font:clamp(12px,1.5vw,21px) var(--mono);letter-spacing:.46em;padding-left:.46em}
+.about-art .art-foot{color:#bfc5c6;letter-spacing:1.5px}
+.dialog-drive-link{margin-bottom:0}
+@media(max-width:1100px){.hero-camera{right:-8%;opacity:.33;transform:rotate(-5deg) scale(.85);transform-origin:top right}}
+@media(max-width:700px){.site-header{background:#0d1218}.brand{color:var(--paper)}.menu-toggle span{background:var(--paper)}.mobile-nav{background:#0c1117;color:var(--paper);border-bottom-color:#3a4148}.hero-camera{display:none}.hero{background:radial-gradient(circle at 94% 18%,#242d35,#10151b 57%)}.hero h1{text-shadow:none}.project-visual{aspect-ratio:1.13}.about-art{min-height:390px}.about-mark-plate img{width:137px;height:158px}.about-mark-plate strong{font-size:69px}.about-mark-plate span{font-size:14px}.about-brand-kicker{font-size:9px}.brand-symbol{width:95%;height:95%}}
