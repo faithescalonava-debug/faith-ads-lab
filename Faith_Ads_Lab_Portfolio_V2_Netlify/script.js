@@ -4,10 +4,62 @@
    All projects are labeled as portfolio studies; avoid inventing results or clients.
 */
 const projects = [
-  {id:'wonderquest', num:'01', title:'A DIFFERENT KIND OF SCREEN TIME.', brand:'WONDERQUEST / DISCOVERY MICROSCOPE', category:'story', type:'EMOTIONAL STORYTELLING', tone:'wonder', accent:'#d2e99a', hook:'Two childhood habits. Two very different paths.', idea:'A parallel-story creative that contrasts passive scrolling with hands-on discovery — showing the product as an inviting alternative, not a lecture.', execution:'Character-consistent AI scenes, family moments, split-screen storytelling, product reveal, and emotional pacing.', video:'', poster:''},
-  {id:'omelia', num:'02', title:'SKIN THAT STILL LOOKS LIKE SKIN.', brand:'OMELIA / SEMBRI TU', category:'ugc', type:'BEAUTY UGC / DEMO', tone:'beauty', accent:'#edbdb5', hook:'Sometimes less makeup makes all the difference.', idea:'An approachable beauty story that moves from a relatable makeup frustration into a natural in-car product recommendation.', execution:'AI UGC character continuity, Italian-language testimonial direction, close-up application sequence, and benefit-led framing.', video:'', poster:''},
-  {id:'calmi', num:'03', title:'A CALMER EVERYDAY.', brand:'CALMI COLLAR / PET WELLNESS', category:'product', type:'PRODUCT-FIRST UGC', tone:'pet', accent:'#d3b18d', hook:'Show the solution in the moment it matters.', idea:'A pet-owner style concept centered on the everyday action of placing a collar on a golden retriever.', execution:'Natural smartphone-camera realism, clear product interaction, authentic owner-and-pet movement, and simple on-screen storytelling.', video:'', poster:''},
-  {id:'everly', num:'04', title:'MAKE THE ROUTINE FEEL REAL.', brand:'EVERLY / WELLNESS CREATIVE', category:'product', type:'PRODUCT DEMO / B-ROLL', tone:'wellness', accent:'#b7d2be', hook:'A product moment your viewer can instantly understand.', idea:'A clear daily-routine product scene focused on the physical action and a credible, uncomplicated visual.', execution:'Realistic AI character movement, consistent product placement, controlled pacing, and straightforward product B-roll.', video:'', poster:''}
+  {
+    "id": "pixar",
+    "num": "01",
+    "title": "ANIMATION WITH PERSONALITY.",
+    "brand": "PIXAR-INSPIRED ANIMATED STYLE",
+    "category": "story",
+    "type": "AI ANIMATION",
+    "tone": "wonder",
+    "hook": "An attention-first creative sample.",
+    "idea": "A finished sample from my AI-assisted video portfolio.",
+    "execution": "Visual storytelling, AI-assisted production and video editing.",
+    "video": "https://drive.google.com/file/d/1jPgIV2_ZadB2_JU5e69V8wrwMmInVABA/preview",
+    "poster": ""
+  },
+  {
+    "id": "stopmotion",
+    "num": "02",
+    "title": "STOP THE SCROLL IN 3D.",
+    "brand": "3D STOP-MOTION-STYLE ANIMATION",
+    "category": "story",
+    "type": "3D ANIMATION",
+    "tone": "wellness",
+    "hook": "An attention-first creative sample.",
+    "idea": "A finished sample from my AI-assisted video portfolio.",
+    "execution": "Visual storytelling, AI-assisted production and video editing.",
+    "video": "https://drive.google.com/file/d/1B-P6Tm9_Pv3X7i05ztQRyTJX1fYw4n8c/preview",
+    "poster": ""
+  },
+  {
+    "id": "aiugc",
+    "num": "03",
+    "title": "UGC THAT FEELS NATIVE.",
+    "brand": "AI UGC AD",
+    "category": "ugc",
+    "type": "AI UGC AD",
+    "tone": "beauty",
+    "hook": "An attention-first creative sample.",
+    "idea": "A finished sample from my AI-assisted video portfolio.",
+    "execution": "Visual storytelling, AI-assisted production and video editing.",
+    "video": "https://drive.google.com/file/d/1nn-9TnOpaEQYv-7SQ-ptn_SF-ocDP8at/preview",
+    "poster": ""
+  },
+  {
+    "id": "organicugc",
+    "num": "04",
+    "title": "AI MEETS ORGANIC UGC.",
+    "brand": "AI + ORGANIC UGC AD",
+    "category": "ugc",
+    "type": "UGC / SOCIAL AD",
+    "tone": "pet",
+    "hook": "An attention-first creative sample.",
+    "idea": "A finished sample from my AI-assisted video portfolio.",
+    "execution": "Visual storytelling, AI-assisted production and video editing.",
+    "video": "https://drive.google.com/file/d/1uK9Hd3AIoG1V0QcBncuMxaZSs5G8N2TB/preview",
+    "poster": ""
+  }
 ];
 const grid = document.getElementById('project-grid');
 const dialog = document.getElementById('project-dialog');
@@ -33,6 +85,7 @@ function videoMarkup(url) {
    const id = parsed.pathname.match(/\/(?:video\/)?(\d+)/)?.[1];
    if (id) embed = `https://player.vimeo.com/video/${id}`;
  }
+ if (host === 'drive.google.com' && parsed.pathname.includes('/file/d/') && parsed.pathname.endsWith('/preview')) return `<iframe src="${escapeHTML(parsed.href)}" title="Portfolio video" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>`;
  if (embed) return `<iframe src="${escapeHTML(embed)}" title="Portfolio project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
  // Only self-hosted video files are supported here. Third-party non-embed pages cannot play as MP4s.
  if (!/\.(mp4|webm|mov)$/i.test(parsed.pathname)) return '<div class="video-notice">VIDEO LINK NEEDS AN EMBED URL <span>↗</span></div>';
